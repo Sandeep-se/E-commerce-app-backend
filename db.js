@@ -9,5 +9,5 @@ mongoose.connect(process.env.DB_API,{
     mongoose.connection.once('open', () => console.log('mongodb connected'))
 }
 module.exports=connectDB
-//"mongodb://127.0.0.1:27017/user"
+
 

@@ -2,6 +2,10 @@ const mongoose = require('mongoose');
 
 const productSchema = mongoose.Schema(
     {
+    name:{
+        type:String,
+        required:true
+    },
     email: {
         type: String,
         required: true,
@@ -10,6 +14,14 @@ const productSchema = mongoose.Schema(
     password: {
         type: String,
         required: true,
+    },
+    contact:
+    {
+        type:Number,
+    },
+    address:
+    {
+        type:String,
     },
     basket: [
         {
@@ -25,14 +37,41 @@ const productSchema = mongoose.Schema(
                 type:Number,
                 required: true,
             },
-            rating:{
+            quantity:{
                 type:Number,
                 required:true,
+                default:1
             },
-            // image:{
-            //     type:String,
-            //     required:true,
-            // }, 
+            image:{
+                type:String,
+                required:true,
+            }, 
+        }
+    ],
+    orders:
+    [
+        {
+            id: {
+                type: String,
+                required: true,
+            },
+            title:{
+                type:String,
+                required:true,
+            },
+            price: {
+                type:Number,
+                required: true,
+            },
+            quantity:{
+                type:Number,
+                required:true,
+                default:1
+            },
+            image:{
+                type:String,
+                required:true,
+            }, 
         }
     ]
 });
