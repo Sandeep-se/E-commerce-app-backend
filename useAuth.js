@@ -1,7 +1,6 @@
 const user=require('./model.js')
 const express=require('express')
-const crypto=require('crypto')
-const jwt=require('jsonwebtoken')
+
 
 
 const signUp=async(req,res)=>
