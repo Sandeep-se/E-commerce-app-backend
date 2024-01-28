@@ -8,7 +8,7 @@ const cookieParser=require('cookie-parser')
 const jwt=require('jsonwebtoken')
 const socketIo=require('socket.io')
 const http=require('http')
-require('dotenv').config()
+require('dotenv').config().parsed
 
 connectDB();
 
